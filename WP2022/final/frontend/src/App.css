@@ -1,0 +1,76 @@
+.App {
+  height: 100%;
+  margin: 2rem;
+  text-align: center;
+}
+
+.calendarContainer {
+  width: 80%;
+  /* height: auto; */
+  margin: auto;
+  padding: 1rem;
+  background-color: #fff;
+  /* box-shadow: 10px 5px 5px rgb(138, 136, 136); */
+}
+
+:where(.css-dev-only-do-not-override-acm2ia) a {
+  color: initial !important;
+}
+
+:where(.css-acm2ia) a {
+  color: initial !important;
+}
+
+:where(.css-dev-only-do-not-override-acm2ia).ant-layout {
+  height: 100vh !important;
+}
+
+:where(.css-acm2ia).ant-layout {
+  height: 100vh !important;
+}
+
+.fc-button {
+  width: 5vw;
+}
+
+.fc .fc-daygrid-day.fc-day-today  {
+  background: #eef5ff !important;
+} 
+
+.fc-day-today {
+  background-color: #eef5ff !important;
+}
+
+.ant-menu-item-selected {
+  background-color: #1677ff !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #adadad;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3; 
+}
+
+.finish > .fc-event-main > .fc-event-main-frame > .fc-event-title-container > .fc-event-title {
+  text-decoration: line-through;
+}
+
+.finish > .fc-event-title {
+  text-decoration: line-through;
+}

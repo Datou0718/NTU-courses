@@ -1,0 +1,11 @@
+== Test thread package with public testcase part1-0 (10%) ==
+thread package with public testcase part1-0: OK (8.1s)
+== Test thread package with public testcase part1-1 (10%) ==
+thread package with public testcase part1-1: OK (0.7s)
+== Test thread package with public testcase part2-0 (5%) ==
+thread package with public testcase part2-0: OK (0.6s)
+== Test thread package with public testcase part2-1 (5%) ==
+thread package with public testcase part2-1: OK (1.0s)
+== Test thread package with public testcase part2-2 (5%) ==
+thread package with public testcase part2-2: OK (1.0s)
+Score: 35/35

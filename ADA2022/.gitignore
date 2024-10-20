@@ -1,0 +1,8 @@
+.DS_Store
+*.zip
+.vscode/
+slides/
+test*
+*.in
+*.out
+MP/a.out.dSYM/

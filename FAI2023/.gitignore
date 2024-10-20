@@ -1,0 +1,9 @@
+.DS_Store
+*.zip
+.vscode
+slides/
+__pycache__/
+*data*
+report.md
+*.png
+HW4/hw4

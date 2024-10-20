@@ -1,0 +1,62 @@
+#!/usr/bin/python
+
+import re
+from gradelib import *
+
+r = Runner(save("xv6.out"))
+
+@test(0, "Testing symbolic links to directories (public)")
+def test_symlinkfile():
+    r.run_qemu(shell_script([
+        'symlinkdir'
+    ]), timeout=20)
+
+@test(9, "Symbolic links to directories: public testcase 1 (9 points)", parent=test_symlinkfile)
+def test_symlink_file_public1():
+    r.match("^public testcase 1: ok$")
+
+@test(9, "Symbolic links to directories: public testcase 2 (9 points)", parent=test_symlinkfile)
+def test_symlink_file_public2():
+    r.match("^public testcase 2: ok$")
+
+@test(9, "Symbolic links to directories: fish testcase 1 (9 points)", parent=test_symlinkfile)
+def test_symlink_file_fish1():
+    r.match("^fish testcase 1: ok$")
+
+@test(9, "Symbolic links to directories: fish testcase 2 (9 points)", parent=test_symlinkfile)
+def test_symlink_file_fish2():
+    r.match("^fish testcase 2: ok$")
+
+@test(9, "Symbolic links to directories: fish testcase 3 (9 points)", parent=test_symlinkfile)
+def test_symlink_file_fish3():
+    r.match("^fish testcase 3: ok$")
+
+@test(9, "Symbolic links to directories: fish testcase 4 (9 points)", parent=test_symlinkfile)
+def test_symlink_file_fish4():
+    r.match("^fish testcase 4: ok$")
+
+@test(9, "Symbolic links to directories: cucumber testcase 1 (9 points)", parent=test_symlinkfile)
+def test_symlink_file_cucumber1():
+    r.match("^cucumber testcase 1: ok$")
+
+@test(9, "Symbolic links to directories: cucumber testcase 2 (9 points)", parent=test_symlinkfile)
+def test_symlink_file_cucumber2():
+    r.match("^cucumber testcase 2: ok$")
+
+@test(9, "Symbolic links to directories: cucumber testcase 3 (9 points)", parent=test_symlinkfile)
+def test_symlink_file_cucumber3():
+    r.match("^cucumber testcase 3: ok$")
+
+@test(9, "Symbolic links to directories: cucumber testcase 4 (9 points)", parent=test_symlinkfile)
+def test_symlink_file_cucumber4():
+    r.match("^cucumber testcase 4: ok$")
+
+@test(9, "Symbolic links to directories: cucumber testcase 5 (9 points)", parent=test_symlinkfile)
+def test_symlink_file_cucumber5():
+    r.match("^cucumber testcase 5: ok$")
+
+@test(9, "Symbolic links to directories: cucumber testcase 6 (9 points)", parent=test_symlinkfile)
+def test_symlink_file_cucumber6():
+    r.match("^cucumber testcase 6: ok$")
+
+run_tests()

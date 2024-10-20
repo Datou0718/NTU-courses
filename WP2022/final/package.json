@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "cd frontend && yarn start",
+    "server": "cd backend && yarn server",
+    "install:prod": "cd frontend && yarn install --freeze-lockfile && cd ../backend && yarn install --freeze-lockfile",
+    "build": "cd frontend && yarn build",
+    "deploy": "cd backend && yarn deploy"
+  },
+  "name": "wp_final",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Datou0718/wp_final.git",
+  "author": "Datou Liao <lyck92@gmail.com>",
+  "license": "MIT"
+}

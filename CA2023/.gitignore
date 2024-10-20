@@ -1,0 +1,8 @@
+.DS_Store
+*.zip
+.vscode/
+slides/
+*gtkwave*
+*vcd*
+cpu
+Midterm

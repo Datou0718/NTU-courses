@@ -1,0 +1,79 @@
+base_model: ../Taiwan-LLM-7B-v2.0-chat
+model_type: LlamaForCausalLM
+tokenizer_type: LlamaTokenizer
+is_llama_derived_model: true
+
+load_in_8bit: false
+load_in_4bit: true
+strict: false
+
+datasets:
+  - path: ../data/train.json
+    ds_type: json
+    type: alpaca
+    # type: 
+    #   system_prompt: "你是一名中文系教授，以下是學生對文言文或現代文的問題。請提供他們有用且精確無誤的答案。"
+    #   no_input_format: |-
+    #     學生: {instruction} 
+    #     教授:
+
+
+dataset_prepared_path:
+val_set_size: 0.05
+output_dir: ../adapter_checkpoint/r4_batch1_prompt
+
+adapter: qlora
+lora_model_dir:
+
+sequence_len: 2048
+sample_packing: true
+pad_to_sequence_len: true
+
+lora_r: 4
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules:
+lora_target_linear: true
+lora_fan_in_fan_out:
+
+wandb_project:
+wandb_entity:
+wandb_watch:
+wandb_run_id:
+wandb_log_model:
+
+gradient_accumulation_steps: 1
+micro_batch_size: 1
+num_epochs: 2
+optimizer: paged_adamw_32bit
+lr_scheduler: cosine
+learning_rate: 0.0002
+
+train_on_inputs: false
+group_by_length: false
+bf16: true
+fp16: false
+tf32: false
+
+gradient_checkpointing: true
+early_stopping_patience:
+resume_from_checkpoint: 
+auto_resume_from_checkpoints: false
+local_rank:
+logging_steps: 1
+xformers_attention:
+flash_attention: true
+
+warmup_steps: 10
+eval_steps: 0.05
+eval_table_size:
+save_steps:
+debug:
+deepspeed:
+weight_decay: 0.0
+fsdp:
+fsdp_config:
+special_tokens:
+  bos_token: "<s>"
+  eos_token: "</s>"
+  unk_token: "<unk>"

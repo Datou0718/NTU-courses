@@ -1,0 +1,13 @@
+*** Now run 'gdb' in another window.
+
+xv6 kernel is booting
+
+hart 1 starting
+hart 2 starting
+init: starting sh
+$ bigfile
+..
+wrote 270 blocks
+public testcase 1: ok
+panic: freeing free block
+qemu-system-riscv64: terminating on signal 2

@@ -1,0 +1,13 @@
+.listContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toDoList {
+    width: 30vw;
+    height: 70vh;
+    background-color: white;
+    overflow-y: auto;
+}
